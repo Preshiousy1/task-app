@@ -32,7 +32,16 @@ Generate a new application key
 
     php artisan key:generate
 
-Run the database migrations (**Set the database connection in .env before migrating**)
+**Set the database connection in .env before migrating**
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel-task-app
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+Run the database migrations
 
     php artisan migrate
 
@@ -51,15 +60,6 @@ You can now access the server at http://localhost:8000
     php artisan key:generate
 
 **Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
-
-    ```bash
-        DB_CONNECTION=mysql
-        DB_HOST=127.0.0.1
-        DB_PORT=3306
-        DB_DATABASE=laravel-task-app
-        DB_USERNAME=root
-        DB_PASSWORD=
-    ```
 
     php artisan migrate
     php artisan serve
